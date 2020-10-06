@@ -1,13 +1,21 @@
 <?php
 
-namespace models;
+namespace Models;
 
-class Cine{
+class Cinema{
     private $name;
     private $id;
     private $address;
     private $maxCapacity;
     private $ticketPrice;
+
+    public function __construct($name,$id,$address,$maxCapacity,$ticketPrice) {
+        $this->setName($name);
+        $this->setID($id);
+        $this->setAddress($address);
+        $this->setMaxCapacity($maxCapacity);
+        $this->setTicketPrice($ticketPrice);
+    }
 
     /**
      * Get the value of name

@@ -1,0 +1,82 @@
+*{
+	box-sizing: border-box;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	font-size: 18px;
+	height: 100%;
+}
+
+body{
+	background: url("../img/background.jpeg")  center no-repeat;
+	background-size: cover;
+	margin: 0;
+}
+.container{
+    background-color: rgba(240, 248, 255, 0.692);
+	border-radius: 0.5em;
+	box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
+	display: block;
+	padding: 2em;
+	margin: 10% auto;
+	margin-top: 5%;
+	width: 98%;
+}
+
+form button.submit{
+    background: rgba(255,255,255,0.25);
+    border: 1px solid #333;
+    border-radius: 7px;
+    line-height: 1em;
+    width: 20%;
+    margin: auto;
+    padding: 0.5em 0.5em;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+form label{
+	border-bottom: 1px solid #333;
+	display: block;
+	font-size: 1.25em;
+	margin-bottom: 1em;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+form label input{
+	background: none;
+	border: none;
+	line-height: 1em;
+	font-weight: 300;
+	padding: 0.125em 0.25em;
+	width: 100%;
+}
+
+h1{
+	font-size: 3em;
+    margin: 0 0 0.5em 0;
+    text-align: center;
+}
+
+th{
+	width: max-content;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.custom-scrollbar {
+	position: relative;
+	height: 560px;
+	overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+	display: block;
+}
