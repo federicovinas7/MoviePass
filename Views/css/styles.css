@@ -11,8 +11,10 @@ html{
 }
 
 body{
+	
 	background: url("../img/background.jpeg")  center no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
 	margin: 0;
 }
 .container{
@@ -24,6 +26,19 @@ body{
 	margin: 10% auto;
 	margin-top: 5%;
 	width: 98%;
+}
+
+.container-flex{
+    background-color: rgba(240, 248, 255, 0.692);
+	border-radius: 0.5em;
+	box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
+	display: block;
+	padding: 2em;
+	margin:  auto;
+	margin-top: 1%;
+	width: 98%;
+	max-height:800px;
+	overflow-y: scroll;
 }
 
 form button.submit{

@@ -33,5 +33,19 @@
         "address": "fg",
         "maxCapacity": 675,
         "ticketPrice": 876
+    },
+    {
+        "name": "Cinemacenter",
+        "id": 1601999347,
+        "address": "mar 15",
+        "maxCapacity": 100,
+        "ticketPrice": 20
+    },
+    {
+        "name": "Cinemacenter",
+        "id": 1601999626,
+        "address": "mar 15",
+        "maxCapacity": 100,
+        "ticketPrice": 20
     }
 ]

@@ -1,3 +1,6 @@
+<?php
+    require_once('nav.php');
+?>
 <main class="container">
     <h1>Cinemas</h1>
     <form action="<?php echo FRONT_ROOT ?>Cinema/showAddCinema" method="POST">
