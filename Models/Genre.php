@@ -3,8 +3,9 @@
 namespace Models;
 
 class Genre{
-    private $id;
-    private $name;
+    //dejo los atributos publicos porque sino no encodea a json dentro de la pelicula D:
+    public $id;
+    public $name;
 
     public function __construct($id,$name) {
         $this->id = $id;
