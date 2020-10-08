@@ -1,5 +1,5 @@
-<?php
-    require_once('nav.php');
+<?php 
+    require_once("header.php");
 ?>
 <main class="container">
     <h1>Cinemas</h1>
