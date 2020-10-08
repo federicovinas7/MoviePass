@@ -12,7 +12,7 @@ class Movie{
     private $genres;
     private $releaseDate;
 
-    public function __construct($title,$id,$synopsis,$poster,$length="",$genres=[],$releaseDate) {
+    public function __construct($title,$id,$synopsis,$poster,$length="",$genres,$releaseDate) {
         $this->setTitle($title);
         $this->setId($id);
         $this->setLength($length);
@@ -161,7 +161,6 @@ class Movie{
 
         return $this;
     }
-
 }
 
 ?>

@@ -19,13 +19,13 @@ class MoviedbDAO{
     }
 
     //si no se aclara se usa region argentina
-    public function getAll($query,$page=1,$language="en-US",$region="ar")  //puede ser popular , upcoming, top_rated o now_playing(esta es la de carteleras)
+    public function getAll($query,$page=1,$language="es-AR",$region="US")  //puede ser popular , upcoming, top_rated o now_playing(esta es la de carteleras)
     {
         $filename="https://api.themoviedb.org/3/movie/$query?api_key=$this->apiKey&language=$language&page=$page&region=$region";
         return $this->jsonToArray($filename);
     }
 
-    public function searchMovie($query,$page,$language="en-US",$region="ar"){ //talvez agregarle por año
+    public function searchMovie($query,$page,$language="es-AR",$region="US"){ //talvez agregarle por año
         $query=str_replace(" ","%20",$query);
         $filename="https://api.themoviedb.org/3/search/movie?api_key=$this->apiKey&language=$language&query=$query&page=$page&include_adult=true";
         return $this->jsonToArray($filename);
@@ -38,7 +38,7 @@ class MoviedbDAO{
         $this->setTotalPages($array["total_pages"]);
         $genreContr=new GenreController();
         foreach ($array["results"] as $movie) {               
-            $newMovie=new Movie($movie["original_title"],
+            $newMovie=new Movie($movie["title"],
                                 $movie["id"],
                                 $movie["overview"],
                                 "https://image.tmdb.org/t/p/original".$movie["poster_path"],
@@ -50,7 +50,7 @@ class MoviedbDAO{
         return $this->movies;
     }
 
-    public function getDetailsById($id, $language="en-US"){
+    public function getDetailsById($id, $language="es-AR"){
         $filename="https://api.themoviedb.org/3/movie/$id?api_key=$this->apiKey&language=$language";
         $this->movies=array();
         $jsonResults=file_get_contents($filename);

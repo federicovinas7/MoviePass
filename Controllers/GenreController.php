@@ -12,9 +12,11 @@ class GenreController{
     
     public function idArrayToObjects($idArray){
         $newArray=array();
-        foreach ($idArray as $value) {
-            $newGenre=$this->genreDao->getById($value);
-            $newArray[]=$newGenre;
+        if(!empty($idArray)){
+            foreach ($idArray as $value) {
+                $newGenre=$this->genreDao->getById($value);
+                $newArray[]=$newGenre;
+            }
         }
         return $newArray;
     }
