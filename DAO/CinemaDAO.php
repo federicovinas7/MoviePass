@@ -20,6 +20,11 @@ class CinemaDAO{
         $this->saveData();
     }
 
+    public function modify($modifiedCinema){
+        $this->remove($modifiedCinema->getId());
+        $this->add($modifiedCinema);
+    }
+
     public function remove($id){
         $this->retrieveData();
         $flag=false;
@@ -41,6 +46,20 @@ class CinemaDAO{
         return $this->cinemas;
     }
 
+    public function getCinema($id){
+        $this->retrieveData();
+        $flag=false;
+        $i=0;
+        $cinema=false;
+        while ($flag==false && $i<count($this->cinemas)) {
+            if ($this->cinemas[$i]->getId() == $id) {
+                $cinema=$this->cinemas[$i];
+                $flag=true;
+            }
+            $i++;
+        }
+        return $cinema;
+    }
 
     private function saveData(){
         $toEncode=array();
