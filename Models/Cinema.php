@@ -10,11 +10,15 @@ class Cinema{
     private $ticketPrice;
 
     public function __construct($name,$id,$address,$maxCapacity,$ticketPrice) {
-        $this->setName($name);
-        $this->setID($id);
-        $this->setAddress($address);
-        $this->setMaxCapacity($maxCapacity);
-        $this->setTicketPrice($ticketPrice);
+        $this->name=($name);
+        $this->id=($id);
+        $this->address=($address);
+        $this->maxCapacity=($maxCapacity);
+        $this->ticketPrice=($ticketPrice);
+    }
+
+    public static function compare($a, $b) {
+        return strcmp($a->getName(), $b->getName());
     }
 
     /**
