@@ -22,7 +22,7 @@ class CinemaController{
     }
 
     public function add($name,$address,$maxCapacity,$ticketPrice){
-        $id=time(); //number of seconds since January 1 1970
+        $id=(string)time(); //number of seconds since January 1 1970
         //talvez comprobar si se repiten para agregar
         $newCinema=new Cinema($name,$id,$address,intval($maxCapacity),floatval($ticketPrice));
         $this->cinemaDao->add($newCinema);
@@ -30,7 +30,7 @@ class CinemaController{
     }
 
     public function modify($name,$id,$address,$maxCapacity,$ticketPrice){
-        $this->cinemaDao->modify(new Cinema($name,$id,$address,$maxCapacity,$ticketPrice));
+        $this->cinemaDao->modify(new Cinema($name,$id,$address,intval($maxCapacity),floatval($ticketPrice)));
         $this->showCinemasList();
     }
 
