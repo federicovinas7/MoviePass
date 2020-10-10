@@ -17,6 +17,11 @@
             $movieController = new MovieController();
             $movieController->showMoviesList();
         }
+        public function showHome()
+        {
+            $movieController = new MovieController();
+            $movieController->showHomeList();
+        }
 
     }
 
