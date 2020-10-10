@@ -65,7 +65,19 @@ class MovieDAO{
         }
         $this->saveData();
     }
-
+        public function searchByName($name)
+    {
+        $this->retrieveData();
+        $arrayFinded = array();
+        foreach ($this->movies as $value) {
+            if (stripos($value->getName(),$name)!==false)
+            {
+                array_push($arrayFinded,$value);
+            }
+        }
+        return $arrayFinded;
+        
+    }
     private function saveData(){
         $toEncode=array();
         foreach ($this->movies as $value) {

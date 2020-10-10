@@ -16,6 +16,10 @@
             include VIEWS_PATH."movies_list.php";
         }
     
-    
+        public function searchByName($name)
+        {
+            $moviesFinded=$this->moviedbDao->searchByName($name);
+            return $moviesFinded;
+        }
     }
 ?>
