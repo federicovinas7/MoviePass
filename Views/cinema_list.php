@@ -1,8 +1,8 @@
 <main class="container">
     <h1>Cinemas</h1>
     <div class="custom-scrollbar table-wrapper-scroll-y">
-        <input type="text" id="input" onkeyup="myFunction()" placeholder="Search for names..">
-        <table id="table" class="text-center table table-hover table-striped" >
+        <input type="text" id="input" onkeyup="myFunction()" class="form-control" placeholder="Search for names..">
+        <table id="table" class="table text-center table-hover table-striped table-cinemas" >
             <thead>
                 <tr class="th-pointer">
                     <th class="th-pointer">Name</th>
@@ -38,6 +38,9 @@
         </table>
     </div>
     <a href="<?php echo FRONT_ROOT ?>Cinema/showAddCinema">
-        <button type="submit">Add new cinema</button>
+        <button class="submit button-a" type="button">Add new cinema</button>
     </a>
 </main>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="<?php echo JS_PATH ?>cinema.table.js"></script>
+<script src="<?php echo JS_PATH ?>bootstrap.js"></script>
