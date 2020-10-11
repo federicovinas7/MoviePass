@@ -95,6 +95,38 @@ class MovieDAO{
             }
         }
     }
+
+    public function getByGenre($genre)
+    {
+        $moviesArray = array();
+
+        $this->getAll();
+      
+        foreach($this->movies as $movie)
+        {
+           
+            $genres = $movie->getGenres();
+            $i = 0;
+            $u = 0;
+            
+            while ($u<count($genre))
+            {
+                while ($i<count($genres))
+                {
+                    if($genre[$u] == $genres[$i]["name"])
+                    {
+                        array_push($moviesArray,$movie);
+                    }
+                    
+                    $i++;
+                }
+                $u++;
+            }
+            
+        }
+                 
+        return $moviesArray;
+    }
 }
 
 ?>
