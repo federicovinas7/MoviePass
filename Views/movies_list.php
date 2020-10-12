@@ -7,10 +7,6 @@
     <div class="custom-scrollbar table-wrapper-scroll-y">    
         <div class="row">
             <?php
-                function newF()
-                {
-                    header('Location: http://www.google.com/');
-                }
             foreach ($cinemas as $key => $value) { ?>
                 <div class="col-md-3">    
                     <button type="button" class="btn btn-dark" onClick="dataChange(<?php echo "'". $value->getPoster()."','".$value->getTitle()."','".$value->getSynopsis()."'"?>)" data-id="<?php echo $value->getId() ?>" data-toggle="modal" data-target=".movie"> 
@@ -35,6 +31,8 @@
                                 <h5 class="mt-0" id="modalTitle">fskjalgkañgl</h5>
                                         
                                 <p id="modalSyn">fafgdaskgjadsñlgkdasvñla</p>
+                                <br><br>
+                                <button type="submit" class="btn btn-success">Agregar</button>
                             </div>
                         </div>
                     </div>
@@ -46,6 +44,7 @@
         </div>
     </div>           
 </main>
+
 <script>
     function dataChange(imageIncome,titleIncome,SynIncome)
     {
