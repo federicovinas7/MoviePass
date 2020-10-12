@@ -6,9 +6,14 @@
     <h1>Movies</h1>
     <div class="custom-scrollbar table-wrapper-scroll-y">    
         <div class="row">
-            <?php foreach ($cinemas as $key => $value) { ?>
+            <?php
+                function newF()
+                {
+                    header('Location: http://www.google.com/');
+                }
+            foreach ($cinemas as $key => $value) { ?>
                 <div class="col-md-3">    
-                    <button type="button" class="btn btn-dark"  data-id="<?php echo $value->getId() ?>" data-toggle="modal" data-target=".movie"> 
+                    <button type="button" class="btn btn-dark" onClick="dataChange(<?php echo "'". $value->getPoster()."','".$value->getTitle()."','".$value->getSynopsis()."'"?>)" data-id="<?php echo $value->getId() ?>" data-toggle="modal" data-target=".movie"> 
                         
                         <figure class="figure">
                             <img class="figure-img img-fluid rounded" src="<?php echo $value->getPoster() ?>" width="60%" >
@@ -18,24 +23,36 @@
                     </button>
                 </div>
                 <br>
+                
             <?php } ?>
-
+            
             <div class="modal fade movie"  id="" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="media">
-                            <img class="align-self-center mr-3" src="<?php echo $value->getPoster() ?>" width="70%">
+                            <img id="imgModal" class="align-self-center mr-3" src="" width="70%">
                             <div class="media-body">
-                                <h5 class="mt-0"><?php echo $value->getTitle() ?></h5>
+                                <h5 class="mt-0" id="modalTitle">fskjalgkañgl</h5>
                                         
-                                <p> <?php echo $value->getSynopsis() ?> </p>
+                                <p id="modalSyn">fafgdaskgjadsñlgkdasvñla</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>          
+            
 
 
         </div>
     </div>           
 </main>
+<script>
+    function dataChange(imageIncome,titleIncome,SynIncome)
+    {
+        
+        document.getElementById("imgModal").src = imageIncome;
+        document.getElementById("modalTitle").innerHTML = titleIncome;
+        document.getElementById("modalSyn").innerHTML = SynIncome;
+
+    }
+</script>
