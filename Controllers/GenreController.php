@@ -21,5 +21,5 @@ class GenreController{
         return $newArray;
     }
 }
-
+    
 ?>

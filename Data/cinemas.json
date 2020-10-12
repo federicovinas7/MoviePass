@@ -28,10 +28,17 @@
         "ticketPrice": 876
     },
     {
-        "name": "asdfsd",
-        "id": 1601991830,
-        "address": "5y45y",
-        "maxCapacity": 45345,
-        "ticketPrice": 675
+        "name": "Cinemacenter",
+        "id": 1601999347,
+        "address": "mar 15",
+        "maxCapacity": 100,
+        "ticketPrice": 20
+    },
+    {
+        "name": "Cinemacenter",
+        "id": 1601999626,
+        "address": "mar 15",
+        "maxCapacity": 100,
+        "ticketPrice": 20
     }
 ]

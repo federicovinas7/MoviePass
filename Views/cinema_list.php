@@ -1,3 +1,6 @@
+<?php 
+    require_once("header.php");
+?>
 <main class="container">
     <h1>Cinemas</h1>
     <div class="custom-scrollbar table-wrapper-scroll-y">

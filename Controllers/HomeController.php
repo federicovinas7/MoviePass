@@ -1,15 +1,23 @@
 <?php 
 
-namespace Controllers;
-use Controllers\CinemaController;
-use DAO\MoviedbDAO;
+    namespace Controllers;
 
-class HomeController{
+    use Controllers\CinemaController;
+    use Controllers\MovieController as MovieController;
+    use DAO\MoviedbDAO as MoviedbDAO;
 
-    public function showCinemasList(){
-        $cinemaController=new CinemaController();
-        $cinemaController->showCinemasList();
+    class HomeController{
+
+        public function showCinemasList(){
+            $cinemaController=new CinemaController();
+            $cinemaController->showCinemasList();
+        }
+
+        public function showMoviesList(){
+            $movieController = new MovieController();
+            $movieController->showMoviesList();
+        }
+
     }
-}
 
 ?>
