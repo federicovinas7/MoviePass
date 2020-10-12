@@ -100,27 +100,37 @@ class MovieDAO{
     {
         $moviesArray = array();
 
-        $this->getAll();
+        $this->retrieveData();
       
+        sort($genre);
+
+     
         foreach($this->movies as $movie)
         {
            
             $genres = $movie->getGenres();
-            $i = 0;
-            $u = 0;
-            
-            while ($u<count($genre))
+            $i = 0; 
+            $u = 0; 
+            $flag =0;
+       
+         
+            while ($u<count($genre) && $i<count($genres))
             {
-                while ($i<count($genres))
+                if ($i<count($genres) && ($genre[$u] == $genres[$i]["name"]))
                 {
-                    if($genre[$u] == $genres[$i]["name"])
-                    {
-                        array_push($moviesArray,$movie);
-                    }
-                    
+                    $flag++;
+                    $i++;
+                    $u++;
+                }
+                else
+                {
                     $i++;
                 }
-                $u++;
+            }
+      
+            if ($flag == count($genre))
+            {
+                array_push ($moviesArray,$movie);
             }
             
         }
