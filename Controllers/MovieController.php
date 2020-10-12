@@ -15,6 +15,11 @@
             $cinemas=$this->moviedbDao->getAll('popular');
             include VIEWS_PATH."movies_list.php";
         }
+        public function showHomeList()
+        {
+            $cinemas=$this->moviedbDao->getAll('popular');
+            include VIEWS_PATH."home_page.php";
+        }
     
         public function searchByName($name)
         {
