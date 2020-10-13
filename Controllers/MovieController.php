@@ -8,7 +8,26 @@
         private $moviedbDao;
     
         public function __construct() {
+<<<<<<< Updated upstream
             $this->moviedbDao = new MoviedbDAO();
+=======
+            $this->movieDao = new MovieDAO();
+        }
+        
+        public function searchByName($name)
+        {
+            $moviesFinded=$this->movieDao->searchByName($name);
+            return $moviesFinded;
+        }
+
+        private function getByGenre($genreArray){
+            return $this->movieDao->getByGenre($genreArray);
+        }
+
+        public function updateNowPlaying(){
+            $this->movieDao->updateNowPlaying();
+            $this->showMoviesList();
+>>>>>>> Stashed changes
         }
 
         public function showMoviesList(){
