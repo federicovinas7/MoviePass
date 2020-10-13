@@ -2177,5 +2177,592 @@
             }
         ],
         "release_date": "2020-10-02"
+    },
+    {
+        "title": "The War with Grandpa",
+        "id": 425001,
+        "length": "",
+        "overview": "Molesto de que tenga que compartir la habitaci\u00f3n que ama con su abuelo, Peter decide declarar la guerra en un intento por recuperarla.",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/ltyARDw2EFXZ2H2ERnlEctXPioP.jpg",
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 10751,
+                "name": "Family"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Cagefighter: Worlds Collide",
+        "id": 697039,
+        "length": "",
+        "overview": "Reis es el campeon m\u00e1s grande que jam\u00e1s haya peleado en una jaula LEGENDS. Pero cuando el promotor Max Black lo enfrenta a la superestrella de la lucha libre Randy Stone, Reiss se encuentra en la pelea m\u00e1s dura de su vida.",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/96OFYM1mP6UJ0NOXDM2zL3APsnp.jpg",
+        "genre": [
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Honest Thief",
+        "id": 553604,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/AbJ96LJ7JJakKqYsBwRqpLlaqJc.jpg",
+        "genre": [
+            {
+                "id": 28,
+                "name": "Action"
+            },
+            {
+                "id": 80,
+                "name": "Crime"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Faith Based",
+        "id": 616982,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/2EobXh41lnhIo9RPoH3Sf2exxu2.jpg",
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Yellow Rose",
+        "id": 593427,
+        "length": "",
+        "overview": "Rose es una chica de 17 sin papeles procedente de filipinas que sue\u00f1a con abandonar el pueblo de Texas (Estados Unidos) en el que reside para perseguir su sue\u00f1o como cantante de m\u00fasica. Su mundo se viene abajo cuando Inmigraci\u00f3n descubre y apresa a su madre, suceso que deja a Rose desamparada para sobrevivir al d\u00eda a d\u00eda. Sin otra opci\u00f3n que huir, la adolescente pone rumbo a la alocada ciudad de Austin, donde adem\u00e1s de empezar a conocerse mejor a s\u00ed misma, tendr\u00e1 que encontrar un nuevo hogar a toda costa",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/kmnH8KmoiM7VpHZAADiTPWbpFGl.jpg",
+        "genre": [
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 10402,
+                "name": "Music"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Time",
+        "id": 653729,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/hchRmyJ2FIkJtoqALWScxGlwu5E.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Mighty Ira",
+        "id": 748963,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/cr894G2T6G1hcpzCY5hBMI76xb5.jpg",
+        "genre": [],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Archons",
+        "id": 553357,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/i0qdO371R0awkVLYqIfLrPn4pXc.jpg",
+        "genre": [
+            {
+                "id": 27,
+                "name": "Horror"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "release_date": "2020-10-06"
+    },
+    {
+        "title": "Pray: The Story of Patrick Peyton",
+        "id": 747981,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/s33sWe2FK1fZEAIA3NNl2xC5lzn.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "The Wayward - A Short Film",
+        "id": 749710,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/cDnYJrs8h7NMbVuraeziLaYib3J.jpg",
+        "genre": [
+            {
+                "id": 27,
+                "name": "Horror"
+            },
+            {
+                "id": 9648,
+                "name": "Mystery"
+            },
+            {
+                "id": 878,
+                "name": "Science Fiction"
+            }
+        ],
+        "release_date": "2020-10-10"
+    },
+    {
+        "title": "Worth The Wait",
+        "id": 744127,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "Darkness in Tenement 45",
+        "id": 595601,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/6vykCckhFDxRtXVvFOyD9GWM1MI.jpg",
+        "genre": [
+            {
+                "id": 18,
+                "name": "Drama"
+            },
+            {
+                "id": 27,
+                "name": "Horror"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "La Gran Madre",
+        "id": 559135,
+        "length": "",
+        "overview": "Este documental de v\u00e9rit\u00e9 sigue a Nora Sandigo, tutora legal de m\u00e1s de 2000 hijos ciudadanos estadounidenses de inmigrantes indocumentados, mientras ella sacrifica todo para mantener a los ni\u00f1os nacidos en Estados Unidos con sus padres indocumentados.",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/y75QkRdQv00Z1aJrmJXptpYPe8g.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "The Donut Dollies",
+        "id": 680594,
+        "length": "",
+        "overview": "En 1968, dos mejores amigos se unieron a un equipo de \u00e9lite y volaron a una zona de guerra con vestidos azul claro. Eran Donut Dollies de la Cruz Roja. Estas j\u00f3venes idealistas abrazaron su misi\u00f3n, animar a los soldados en Vietnam, con energ\u00eda, creatividad, compasi\u00f3n y determinaci\u00f3n, pero no ten\u00edan idea de en qu\u00e9 se estaban metiendo. 47 a\u00f1os despu\u00e9s, se re\u00fanen en Vietnam para volver sobre sus pasos; pregunte por qu\u00e9 fueron; pregunte si marcaron la diferencia; desbloquea recuerdos enterrados y comparte sus historias por primera vez.",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/mrAqIhG6DF9pSooTPXBKDIfvSwn.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "Medicine Man: The Stan Brock Story",
+        "id": 744107,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "Freeland",
+        "id": 665883,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/v2M0SnWAg33ToPuVdaB9ZNi0wtS.jpg",
+        "genre": [
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "Opeka",
+        "id": 669773,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/xolyqaw5NYLdSfa68tYmWtFKPic.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "In Case of Emergency",
+        "id": 742239,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/5UH6StrC0VUVBqkNs0Ip03P3zSH.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "The Test",
+        "id": 737885,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/6z61XlAL1NW7gzalbr7CaTyzihv.jpg",
+        "genre": [
+            {
+                "id": 27,
+                "name": "Horror"
+            }
+        ],
+        "release_date": "2020-10-07"
+    },
+    {
+        "title": "Head to Head",
+        "id": 744097,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "Monuments",
+        "id": 697930,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/fHqZpIuoLCo6GG7eev6tH3UYv0F.jpg",
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "Here We Are",
+        "id": 712117,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "release_date": "2020-10-08"
+    },
+    {
+        "title": "Aggie",
+        "id": 653745,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/A7Rut5YObmgY42F1zmr6LX8n85J.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-07"
+    },
+    {
+        "title": "The Invincible Dragon",
+        "id": 449998,
+        "length": "",
+        "overview": "Un polic\u00eda de Hong Kong es apartado del servicio tras fallar en una misi\u00f3n para atrapar a un asesino en serie de polic\u00edas. Tiempo despu\u00e9s, el asesino reaparece en Macao e intenta de nuevo seguir su pista.",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/yhctVDcFyhsGtbLMMvujrBAES3d.jpg",
+        "genre": [
+            {
+                "id": 28,
+                "name": "Action"
+            }
+        ],
+        "release_date": "2020-10-06"
+    },
+    {
+        "title": "Tales From Parts Unknown",
+        "id": 751073,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/1ml2Hrvlyhp2qwhldSPAYiNjMzf.jpg",
+        "genre": [
+            {
+                "id": 27,
+                "name": "Horror"
+            }
+        ],
+        "release_date": "2020-10-03"
+    },
+    {
+        "title": "OK",
+        "id": 750800,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/aThLCvJeTe7zrm8CDP53cBsLSWo.jpg",
+        "genre": [],
+        "release_date": "2020-10-07"
+    },
+    {
+        "title": "The Climb",
+        "id": 595931,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/cCaWNkqZIfaKMSPmudOfCF721BN.jpg",
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 18,
+                "name": "Drama"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Just For The Record: Conversations With And About \"Blue\" Gene Tyranny",
+        "id": 751651,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Curtain Up!",
+        "id": 738967,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/mqUM4flVu3FmHjtVDrE08sZ0SHk.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-09-30"
+    },
+    {
+        "title": "D\u00eda de lluvia en Nueva York",
+        "id": 475303,
+        "length": "",
+        "overview": "Dos j\u00f3venes llegan a Nueva York durante un fin de semana donde se topan con el mal tiempo y una serie de aventuras.",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/ya9ojfuWylP4P6iiaIaxz67Chu0.jpg",
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 10749,
+                "name": "Romance"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "The Haunting at Death Valley Junction",
+        "id": 752100,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/eSPAZnCvg9byB50l31pSbaUxCGS.jpg",
+        "genre": [
+            {
+                "id": 27,
+                "name": "Horror"
+            },
+            {
+                "id": 53,
+                "name": "Thriller"
+            }
+        ],
+        "release_date": "2020-10-06"
+    },
+    {
+        "title": "Nobody Dies",
+        "id": 752036,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [],
+        "release_date": "2020-10-07"
+    },
+    {
+        "title": "E14",
+        "id": 751851,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Teething",
+        "id": 726521,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/yOgLkCHnpXoNpcIu9Prm8Jd4Unc.jpg",
+        "genre": [
+            {
+                "id": 27,
+                "name": "Horror"
+            }
+        ],
+        "release_date": "2020-10-06"
+    },
+    {
+        "title": "Village of the Plagued",
+        "id": 752177,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [
+            {
+                "id": 35,
+                "name": "Comedy"
+            },
+            {
+                "id": 27,
+                "name": "Horror"
+            }
+        ],
+        "release_date": "2020-10-09"
+    },
+    {
+        "title": "Vinyl Nation",
+        "id": 692962,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/dtH5DLqjvOt0tsmUs9ADiA1W42M.jpg",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-08-28"
+    },
+    {
+        "title": "Rancho do V\u00f4",
+        "id": 750270,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original",
+        "genre": [
+            {
+                "id": 99,
+                "name": "Documentary"
+            }
+        ],
+        "release_date": "2020-07-15"
+    },
+    {
+        "title": "Orgun",
+        "id": 752612,
+        "length": "",
+        "overview": "",
+        "poster": "https:\/\/image.tmdb.org\/t\/p\/original\/qWX7J5wH1wOxDQqGWj0xciOnA4H.jpg",
+        "genre": [],
+        "release_date": "2020-09-19"
     }
 ]

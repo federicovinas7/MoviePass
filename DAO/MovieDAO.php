@@ -66,8 +66,6 @@ class MovieDAO{
         }
         $this->saveData();
     }
-<<<<<<< Updated upstream
-=======
 
     public function getByGenre($genresArray){ 
      $this->retrieveData();
@@ -89,13 +87,12 @@ class MovieDAO{
         return $newArray;
     }
 
->>>>>>> Stashed changes
         public function searchByName($name)
     {
         $this->retrieveData();
         $arrayFinded = array();
         foreach ($this->movies as $value) {
-            if (stripos($value->getName(),$name)!==false)
+            if (stripos($value->getTitle(),$name)!==false)
             {
                 array_push($arrayFinded,$value);
             }

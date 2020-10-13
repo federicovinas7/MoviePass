@@ -2,15 +2,14 @@
 
     namespace Controllers;
     use Models\Movie;
-    use DAO\MoviedbDAO as MoviedbDAO;
+    use DAO\MovieDAO;
+    use Controllers\GenreController;
+
 
     class MovieController{
-        private $moviedbDao;
+        private $movieDao;
     
         public function __construct() {
-<<<<<<< Updated upstream
-            $this->moviedbDao = new MoviedbDAO();
-=======
             $this->movieDao = new MovieDAO();
         }
         
@@ -27,23 +26,33 @@
         public function updateNowPlaying(){
             $this->movieDao->updateNowPlaying();
             $this->showMoviesList();
->>>>>>> Stashed changes
         }
 
         public function showMoviesList(){
-            $cinemas=$this->moviedbDao->getAll('popular');
+            $movies=$this->movieDao->getAll();
+            $gencontr=new GenreController();
+            $genres=$gencontr->getAll();
             include VIEWS_PATH."movies_list.php";
         }
+
+        public function showMoviesSearch($search){
+            $movies=$this->searchByName($search);
+            $gencontr=new GenreController();
+            $genres=$gencontr->getAll();
+            include VIEWS_PATH."movies_list.php";
+        }
+
+        public function showMoviesByGenre($genArr){
+            $movies=$this->getByGenre($genArr);
+            $gencontr=new GenreController();
+            $genres=$gencontr->getAll();
+            include VIEWS_PATH."movies_list.php";
+        }
+
         public function showHomeList()
         {
-            $cinemas=$this->moviedbDao->getAll('popular');
+            $movies=$this->movieDao->getAll();
             include VIEWS_PATH."home_page.php";
-        }
-    
-        public function searchByName($name)
-        {
-            $moviesFinded=$this->moviedbDao->searchByName($name);
-            return $moviesFinded;
         }
     }
 ?>
