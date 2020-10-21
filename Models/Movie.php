@@ -13,13 +13,13 @@ class Movie{
     private $releaseDate;
 
     public function __construct($title,$id,$synopsis,$poster,$length="",$genres,$releaseDate) {
-        $this->setTitle($title);
-        $this->setId($id);
-        $this->setLength($length);
-        $this->setSynopsis($synopsis);
-        $this->setPoster($poster);
-        $this->setGenres($genres);
-        $this->setReleaseDate($releaseDate);
+        $this->title=($title);
+        $this->id=($id);
+        $this->length=($length);
+        $this->synopsis=($synopsis);
+        $this->poster=($poster);
+        $this->genres=($genres);
+        $this->releaseDate=($releaseDate);
     }
 
     /**

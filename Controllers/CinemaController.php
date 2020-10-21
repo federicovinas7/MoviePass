@@ -10,8 +10,19 @@ class CinemaController{
     public function __construct() {
         $this->cinemaDao=new CinemaDAO();
     }
+
+    public function getAll(){
+        return $this->cinemaDao->getAll();
+    }
+
+    public function getAllSorted(){
+        $sorted=$this->cinemaDao->getAll();
+        usort($sorted,array("Models\Cinema","compare"));
+        return $sorted;
+    }
+
     public function add($name,$address,$maxCapacity,$ticketPrice){
-        $id=time(); //number of seconds since January 1 1970
+        $id=(string)time(); //number of seconds since January 1 1970
         //talvez comprobar si se repiten para agregar
         $newCinema=new Cinema($name,$id,$address,intval($maxCapacity),floatval($ticketPrice));
         $this->cinemaDao->add($newCinema);
@@ -19,7 +30,7 @@ class CinemaController{
     }
 
     public function modify($name,$id,$address,$maxCapacity,$ticketPrice){
-        $this->cinemaDao->modify(new Cinema($name,$id,$address,$maxCapacity,$ticketPrice));
+        $this->cinemaDao->modify(new Cinema($name,$id,$address,intval($maxCapacity),floatval($ticketPrice)));
         $this->showCinemasList();
     }
 
@@ -35,17 +46,17 @@ class CinemaController{
     }
 
     public function showCinemasList(){
-        $cinemas=$this->cinemaDao->getAll();
-        include VIEWS_PATH."cinema_list.php";
+        $cinemas=$this->getAllSorted();
+        require_once VIEWS_PATH."cinema_list.php";
     }
 
     public function showAddCinema(){
-        include VIEWS_PATH."add_cinema.php";
+        require_once VIEWS_PATH."add_cinema.php";
     }
 
     public function showModifyCinema($id){
         $cinema=$this->cinemaDao->getCinema($id);
-        include VIEWS_PATH."modify_cinema.php";
+        require_once VIEWS_PATH."modify_cinema.php";
     }
 
 }

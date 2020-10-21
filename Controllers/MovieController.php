@@ -26,13 +26,34 @@
         public function updateNowPlaying(){
             $this->movieDao->updateNowPlaying();
             $this->showMoviesList();
-
         }
 
         public function showMoviesList(){
-            $cinemas=$this->movieDao->getAll('popular');
+            $movies=$this->movieDao->getAll();
+            $gencontr=new GenreController();
+            $genres=$gencontr->getAll();
             include VIEWS_PATH."movies_list.php";
         }
-    
+
+        public function showMoviesSearch($search){
+            $movies=$this->searchByName($search);
+            $gencontr=new GenreController();
+            $genres=$gencontr->getAll();
+            include VIEWS_PATH."movies_list.php";
+        }
+
+        public function showMoviesByGenre($genArr){
+            $movies=$this->getByGenre($genArr);
+            $gencontr=new GenreController();
+            $genres=$gencontr->getAll();
+            include VIEWS_PATH."movies_list.php";
+        }
+
+        public function showHomeList()
+        {
+            $movies=$this->movieDao->getAll();
+            include VIEWS_PATH."home_page.php";
+        }
+
     }
 ?>

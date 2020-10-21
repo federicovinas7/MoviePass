@@ -4,10 +4,11 @@
 <main class="container">
     <h1>Cinemas</h1>
     <div class="custom-scrollbar table-wrapper-scroll-y">
-        <table class="table table-hover table-striped" >
+        <input type="text" id="input" onkeyup="myFunction()" class="form-control" placeholder="Search for names..">
+        <table id="table" class="table text-center table-hover table-striped table-cinemas" >
             <thead>
-                <tr>
-                    <th>Name</th>
+                <tr class="th-pointer">
+                    <th class="th-pointer">Name</th>
                     <th>Address</th>
                     <th>Maximum capacity</th>
                     <th>Ticket price</th>
@@ -24,19 +25,25 @@
                         <td><?php echo $cine->getTicketPrice()?></td>
                         <td><form action="<?php echo FRONT_ROOT ?>Cinema/showModifyCinema" method="post">
                             <input type="hidden" name="id" value=<?php echo $cine->getId()?>>
-                            <button type="submit" >Modify</button>
+                            <button type="submit" class="btn" >
+                                <img src="/MoviePass/Views/img/wrench-4x.png" alt="trash_icon">     
+                            </button>
                         </form></td>
                         <td><form action="<?php echo FRONT_ROOT ?>Cinema/remove" method="post">
                             <input type="hidden" name="id" value=<?php echo $cine->getId() //revisar si esto esta bien ?>>
-                            <button type="submit">Delete</button>
+                            <button type="submit" class="btn">
+                                <img src="/MoviePass/Views/img/trash-4x.png" alt="trash_icon">
+                            </button>
                         </form></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
     </div>
-    <form action="<?php echo FRONT_ROOT ?>Cinema/showAddCinema" method="POST">
-        <button type="submit">Add new cinema</button>
-    </form>
+    <a href="<?php echo FRONT_ROOT ?>Cinema/showAddCinema">
+        <button class="submit button-a" type="button">Add new cinema</button>
+    </a>
 </main>
-<script src="<?php echo JS_PATH ?>/tablejs.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="<?php echo JS_PATH ?>cinema.table.js"></script>
+<script src="<?php echo JS_PATH ?>bootstrap.js"></script>
