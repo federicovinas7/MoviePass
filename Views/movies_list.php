@@ -1,25 +1,31 @@
-<main class="container">
+<?php 
+require_once(VIEWS_PATH."header.php");
+require_once(VIEWS_PATH."nav.php");
+?>
+<main class="container_movies">
     <h1>Movies</h1>
     <section>
-        <div class="dropdown">
-            <form action="<?php echo FRONT_ROOT ?>Movie/showMoviesByGenre" method="GET">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Genres
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <?php
-                    foreach ($genres as $gen) {
-                        $g = $gen->getName() ?>
-                        <label for="<?php echo $g ?>"><?php echo $g ?>
-                            <input type='checkbox' name="genres[]" id="<?php echo $g ?>" value="<?php echo $g ?>">
-                        </label>
-                    <?php } ?>
-                </div>
+        <div>
+            <div class="dropdown">
+                <form action="<?php echo FRONT_ROOT ?>Movie/showMoviesByGenre" method="GET">
+                    <button class="button-a dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Genres
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <?php
+                        foreach ($genres as $gen) {
+                            $g = $gen->getName() ?>
+                            <label for="<?php echo $g ?>"><?php echo $g ?>
+                                <input type='checkbox' name="genres[]" id="<?php echo $g ?>" value="<?php echo $g ?>">
+                            </label>
+                        <?php } ?>
+                    </div>
+            </div>
+            <button type="submit" class="button-a">Filter</button>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <form class="form-inline d-flex justify-content-center md-form form-sm mt-0" method="GET" action="<?php echo FRONT_ROOT ?>Movie/showMoviesSearch">
-            <i class="fas fa-search" aria-hidden="true"></i>
+
+        <form class="form-inline " method="GET" action="<?php echo FRONT_ROOT ?>Movie/showMoviesSearch">
             <input class="form-control form-control-sm" type="text" placeholder="Search" aria-label="Search" name="search">
         </form>
     </section>
@@ -76,3 +82,4 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="<?php echo JS_PATH ?>bootstrap.js"></script>
+<?php require_once(VIEWS_PATH."footer.php")?>
