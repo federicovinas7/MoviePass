@@ -54,5 +54,6 @@
             $movies=$this->movieDao->getAll();
             include VIEWS_PATH."home_page.php";
         }
+
     }
 ?>
