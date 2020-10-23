@@ -9,6 +9,10 @@ class GenreController{
     public function __construct() {
         $this->genreDao = new GenreDAO();
     }
+
+    public function getAll(){
+        return $this->genreDao->getAll();
+    }
     
     public function idArrayToObjects($idArray){
         $newArray=array();
@@ -21,5 +25,5 @@ class GenreController{
         return $newArray;
     }
 }
-
+    
 ?>

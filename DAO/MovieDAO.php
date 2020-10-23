@@ -4,6 +4,7 @@ namespace DAO;
 
 use Models\Movie;
 use DAO\MoviedbDAO;
+use Models\Genre;
 
 class MovieDAO{
     private $movies=array();
@@ -66,6 +67,39 @@ class MovieDAO{
         $this->saveData();
     }
 
+    public function getByGenre($genresArray){ 
+     $this->retrieveData();
+        $newArray=array();
+        foreach ($this->movies as $movie) {
+            $jaja=0;
+            $genresMovie=$movie->getGenres();
+            foreach ($genresMovie as $genM) {
+                foreach ($genresArray as $strGen) {
+                    if ($strGen ==$genM->getName()){
+                        $jaja++;
+                    }
+                }
+            }     
+            if ($jaja==count($genresArray)) {
+                $newArray[]=$movie;
+            }
+        }
+        return $newArray;
+    }
+
+        public function searchByName($name)
+    {
+        $this->retrieveData();
+        $arrayFinded = array();
+        foreach ($this->movies as $value) {
+            if (stripos($value->getTitle(),$name)!==false)
+            {
+                array_push($arrayFinded,$value);
+            }
+        }
+        return $arrayFinded;
+        
+    }
     private function saveData(){
         $toEncode=array();
         foreach ($this->movies as $value) {
@@ -88,12 +122,22 @@ class MovieDAO{
         $this->movies=array();
         if (file_exists($this->filename)) {
             $jsonContent=file_get_contents($this->filename);
-            $array=($jsonContent)?json_decode($jsonContent,true):array();  
+            $array=($jsonContent)?json_decode($jsonContent,true):array();
             foreach ($array as $movie) {
-                $newMovie=new Movie($movie["title"],$movie["id"],$movie["overview"],$movie["poster"],$movie["length"],$movie["genre"],$movie["release_date"]);
+                $generos = $this->genreGenerator($movie["genre"]);
+                $newMovie=new Movie($movie["title"],$movie["id"],$movie["overview"],$movie["poster"],$movie["length"],$generos,$movie["release_date"]);
                 $this->movies[]=$newMovie;
             }
         }
+    }
+
+    private function genreGenerator($arrayGenre)
+    {
+        $robertoPetinato = array();
+        foreach ($arrayGenre as $value) {
+            array_push($robertoPetinato,new Genre($value["id"],$value["name"]));
+        }
+        return $robertoPetinato;
     }
 }
 

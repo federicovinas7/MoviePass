@@ -11,10 +11,13 @@ html{
 }
 
 body{
+	
 	background: url("../img/background.jpeg")  center no-repeat;
 	background-size: cover;
 	width: 100%;
 }
+
+
 .container{
     background-color: rgba(209, 209, 209, 0.692);
 	border-radius: 0.5em;
@@ -26,6 +29,26 @@ body{
 	width: 90%;
 	backdrop-filter: blur(5px);
   	align-items: center;
+}
+
+.container_movies{
+    background-color: rgba(240, 248, 255, 0.692);
+	border-radius: 0.5em;
+	box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
+	display: block;
+	padding: 2em;
+	margin: 10% auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	width: 90%;
+	backdrop-filter: blur(5px);
+	align-items: center;
+}
+
+.filters{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
 }
 
 .button-a{
@@ -40,6 +63,7 @@ body{
     transition: all 0.25s;
 	cursor: pointer;
 }
+
 
 
 .table-cinemas{
@@ -90,6 +114,7 @@ h1{
 th{
 	width: max-content;
 }
+
 
 .text-center{
 	text-align: center;
