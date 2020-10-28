@@ -2,16 +2,21 @@
 
 namespace DAO;
 
+
 use Models\Cinema;
 use Models\Province;
 use Models\City;
 use DAO\Connection;
 use Exception;
 
-class CinemaDAO{
+class CinemaDAO {
     private $connection;
+    private $roomDao;
     private $tableName = "cinemas";
 
+    public function __construct() {
+        $this->roomDao=new RoomDAO;
+    }
 
     public function add($cinema)
     {
@@ -46,11 +51,12 @@ class CinemaDAO{
                $prov=new Province($row["province_id"],$row["provincia_nombre"]);
                $ci=new City($row["ciu_id"],$row["ciudad_nombre"]);
                $cinema=new Cinema($row["name_cinema"],
-               $row["id_cinema"],
+                                $row["id_cinema"],
                                 $prov,
                                 $ci,
                                 $row["address"]);
-                                $cinemasList[]=$cinema;
+                $cinema->setRooms($this->roomDao->getArrayByCinemaId($row["id_cinema"]));
+                $cinemasList[]=$cinema;
            }
            return $cinemasList;
         } catch (Exception $ex) {
@@ -75,7 +81,7 @@ class CinemaDAO{
         }
     }
 
-    public function getCinema($id){
+    public function getById($id){
         try{
             $query="SELECT c.name_cinema,c.id_province,p.provincia_nombre,ciu.id as id_city,ciu.ciudad_nombre,c.address from cinemas c
             join  provincia p on p.id=c.id_province
@@ -87,12 +93,11 @@ class CinemaDAO{
             $prov=new Province($row["id_province"],$row["provincia_nombre"]);
             $ciu=new City($row["id_city"],$row["ciudad_nombre"]);
             $cinema=new Cinema($row["name_cinema"],$id,$prov,$ciu,$row["address"]);
+            $cinema->setRooms($this->roomDao->getArrayByCinemaId($id));
             return $cinema;
         }catch(Exception $ex){
             throw $ex;
         }
-       
-
     }
     
     public function remove($id){

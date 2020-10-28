@@ -37,7 +37,7 @@ require_once(VIEWS_PATH."nav.php");
                     <button type="button" class="btn" onClick="dataChange(<?php echo "'" . $value->getPoster() . "','" . $value->getTitle() . "','" . $value->getSynopsis() . "'" ?>)" data-id="<?php echo $value->getId() ?>" data-toggle="modal" data-target=".movie">
 
                         <figure class="figure">
-                            <img class="figure-img img-fluid rounded" src="<?php echo $value->getPoster() ?>" width="60%">
+                            <img class="figure-img img-fluid rounded" src="<?php echo "https://image.tmdb.org/t/p/w500".$value->getPoster() ?>" width="60%">
                             <figcaption class="figure-caption"><?php echo $value->getTitle() ?></figcaption>
                         </figure>
 

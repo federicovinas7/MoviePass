@@ -2,8 +2,6 @@
 
 namespace Controllers;
 use Models\Cinema;
-use Models\Province;
-use Models\City;
 use DAO\CinemaDAO;
 use Controllers\LocationController;
 
@@ -64,7 +62,7 @@ class CinemaController{
 
     public function showModifyCinema($id){
         $locContro=new LocationController();
-        $cinema=$this->cinemaDao->getCinema($id);
+        $cinema=$this->cinemaDao->getById($id);
         $provinces=$locContro->getAllProvinces();
         $initCities=$locContro->getCitiesByProvince(1);  
         require_once VIEWS_PATH."modify_cinema.php";
