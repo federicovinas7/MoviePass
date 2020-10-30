@@ -10,7 +10,6 @@ use Exception;
 class MovieDAO{
     private $connection;
     private $genreXMDao;
-    private $roomDao;
     private $movieDB;
     private $tableName = "movies";
 
@@ -19,9 +18,8 @@ class MovieDAO{
         $this->movieDB=new MoviedbDAO();
     }
 
-    public function add($movieId)
+    public function add($movie)
     {
-        $movie=$this->movieDB->getDetailsById($movieId);
         try
         {
             $query = "INSERT INTO $this->tableName (id_movie,title,length,synopsis,poster_url,video_url,release_date) 
@@ -35,7 +33,7 @@ class MovieDAO{
             $parameters["release_date"]= $movie->getReleaseDate();
             $this->connection = Connection::getInstance();
             $this->connection->executeNonQuery($query, $parameters);
-            $this->genreXMDao->addGenresArray($movie->getGenres(),$movieId);
+            $this->genreXMDao->addGenresArray($movie->getGenres(),$movie->getId());
         }
         catch(Exception $ex)
         {
@@ -65,88 +63,73 @@ class MovieDAO{
             $query="SELECT * from movies where id_movie=$idMovie";
             $this->connection=Connection::getInstance();
             $results=$this->connection->execute($query);
-            $row=$results[0];
-            $movie=new Movie($row["title"],$row["id_movie"],$row["synopsis"],$row["poster_url"],$row["video_url"],$row["length"],$row["release_date"]);
-            $movie->setGenres($this->genreXMDao->getByMovieId($idMovie));
-            return $movie;
+            if(!empty($results)){
+                $row=$results[0];
+                $movie=new Movie($row["title"],$row["id_movie"],$row["synopsis"],$row["poster_url"],$row["video_url"],$row["length"],[],$row["release_date"]);
+                $movie->setGenres($this->genreXMDao->getByMovieId($idMovie));
+                return $movie;
+            }
+            else{
+                return false;
+            }
+            
         }catch(Exception $ex){
             throw $ex;
         }
     }
 
-/*
-    public function updateNowPlaying(){
-        $this->retrieveData();
-        $movieDB=new MoviedbDAO();
-        $num=1;
-        $moviesArr=$movieDB->getAll("now_playing",1);
-        while($num<=$movieDB->getTotalPages()){
-            $moviesArr=$movieDB->getAll("now_playing",$num);
-            $num++;
-            foreach ($moviesArr as $apiMovie) {
-                $bool=false;
-                $i=0;
-                while ($bool==false && $i<count($this->movies)) {
-                    if ($apiMovie->getId()==$this->movies[$i]->getId()) {
-                        $bool=true;
-                    }
-                    $i++;
-                }
-                if ($bool == false) {
-                    $this->movies[]=$apiMovie;
-                }
-            }
-        }
-        $this->saveData();
-    }
-*/
-    
-    /*
-                                            ESTAS VAN EN PROJECTIONS
     public function getByGenre($genresArray){ 
-     $this->retrieveData();
-        $newArray=array();
-        foreach ($this->movies as $movie) {
-            $jaja=0;
-            $genresMovie=$movie->getGenres();
-            foreach ($genresMovie as $genM) {
-                foreach ($genresArray as $strGen) {
-                    if ($strGen ==$genM->getName()){
-                        $jaja++;
+        $movies=$this->getAll();
+            $newArray=array();
+            foreach ($movies as $movie) {
+                $jaja=0;
+                $genresMovie=$movie->getGenres();
+                foreach ($genresMovie as $genM) {
+                    foreach ($genresArray as $strGen) {
+                        if ($strGen ==$genM->getName()){
+                            $jaja++;
+                        }
                     }
+                }     
+                if ($jaja==count($genresArray)) {
+                    $newArray[]=$movie;
                 }
-            }     
-            if ($jaja==count($genresArray)) {
-                $newArray[]=$movie;
             }
-        }
-        return $newArray;
+            return $newArray;
     }
 
-        public function searchByName($name)
-    {
-        $this->retrieveData();
+
+    public function searchByName($name){
+        $movies=$this->getAll();
         $arrayFinded = array();
-        foreach ($this->movies as $value) {
+        foreach ($movies as $value) {
             if (stripos($value->getTitle(),$name)!==false)
             {
                 array_push($arrayFinded,$value);
             }
         }
-        return $arrayFinded;
-        
+        return $arrayFinded; 
     }
-*/
 
-/*
-    private function genreGenerator($arrayGenre)
-    {
-        $robertoPetinato = array();
-        foreach ($arrayGenre as $value) {
-            array_push($robertoPetinato,new Genre($value["id"],$value["name"]));
-        }
-        return $robertoPetinato;
-    }*/
+    /**
+     * guarda en la db las peliculas del now_playing de la api pero solo hasta la quinta pagina D:
+     */
+    public function updateNowPlaying(){
+        $movieDB=new MoviedbDAO();
+        $num=1;
+        $moviesArr=$movieDB->getAll("now_playing",1);
+        while($num<=5){   
+            $moviesArr=$movieDB->getAll("now_playing",$num);
+            $num++;
+            foreach ($moviesArr as $apiMovie) {
+                if ($this->getById($apiMovie->getId())==false) {   //si no la encuentra en la db, lo agrega
+                    $detailedMovie=$this->movieDB->getDetailsById($apiMovie->getId());
+                    $this->add($detailedMovie);
+                }   
+            }
+        }  
+    }
+
 }
 
 ?>
