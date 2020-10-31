@@ -13,8 +13,7 @@ class GenreXMovieDAO {
     {
         try
         {
-            $query = "INSERT into $this->tableName(id_gxm,id_genre,id_movie) values(:id_gxm,:id_genre,:id_movie)";
-            $parameters["id_gxm"]=time();
+            $query = "INSERT into $this->tableName(id_genre,id_movie) values(:id_genre,:id_movie)";
             $parameters["id_genre"] = $id_genre;
             $parameters["id_movie"] =$id_movie;
             $this->connection = Connection::getInstance();

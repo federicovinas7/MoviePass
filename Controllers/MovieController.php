@@ -12,15 +12,11 @@
         public function __construct() {
             $this->movieDao = new MovieDAO();
         }
-        
+        //todo adaptar estos 3 metodos
         public function searchByName($name)
         {
             $moviesFinded=$this->movieDao->searchByName($name);
             return $moviesFinded;
-        }
-
-        private function getByGenre($genreArray){
-            return $this->movieDao->getByGenre($genreArray);
         }
 
         public function updateNowPlaying(){
@@ -40,19 +36,6 @@
             $gencontr=new GenreController();
             $genres=$gencontr->getAll();
             include VIEWS_PATH."movies_list.php";
-        }
-
-        public function showMoviesByGenre($genArr){
-            $movies=$this->getByGenre($genArr);
-            $gencontr=new GenreController();
-            $genres=$gencontr->getAll();
-            include VIEWS_PATH."movies_list.php";
-        }
-
-        public function showHomeList()
-        {
-            $movies=$this->movieDao->getAll();
-            include VIEWS_PATH."home_page.php";
         }
 
     }

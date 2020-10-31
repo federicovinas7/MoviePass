@@ -53,6 +53,7 @@ class MoviedbDAO{
 
     public function getDetailsById($id, $language="es-AR"){
         $filename="https://api.themoviedb.org/3/movie/$id?api_key=$this->apiKey&language=$language";
+        $genreContr=new GenreController();
         $this->movies=array();
         $jsonResults=file_get_contents($filename);
         $array=($jsonResults)?json_decode($jsonResults,true):array();
@@ -62,7 +63,7 @@ class MoviedbDAO{
                             $array["poster_path"],
                             $this->getVideo($id),
                             $array["runtime"],
-                            $array["genres"], // arreglo de objetos genero
+                            $genreContr->genresArrayToObject($array["genres"]), // arreglo de objetos genero
                             $array["release_date"]);
         return $newMovie;
     }
@@ -71,7 +72,12 @@ class MoviedbDAO{
         $filename="https://api.themoviedb.org/3/movie/$idMovie/videos?api_key=7aa6621ccfa43667fe6bb6917d72e075&language=$language";
         $jsonResults=file_get_contents($filename);
         $array=($jsonResults)?json_decode($jsonResults,true):array();
-        return "https://www.youtube.com/watch?v=".$array["results"]["key"];
+        if (!empty($array["results"])) {
+            $obj=$array["results"][0];
+            return $obj["key"];
+        }
+        else
+            return "-";  
     }
 
     /**
